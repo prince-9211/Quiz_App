@@ -1,0 +1,129 @@
+body,
+html{
+    height: 100%;
+    width: 100%;
+    margin:1rem 0rem;
+    padding: 0;
+    font-family: "Inter",sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#quiz-container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+    padding: 1rem;
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgb(55, 227, 227);
+    box-shadow: 4px 10px grey;
+    cursor: pointer;
+    transition:transform 0.3s ease;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(53, 62, 4);
+}
+.section:hover{
+    transform: translateY(-10px);
+}
+.section[data-section="0"]{
+    background-color: rgb(15, 138, 132);
+}
+.section[data-section="1"]{
+    background-color: rgb(16, 167, 48);
+}
+.section[data-section="2"]{
+    background-color: rgb(208, 24, 48);
+}
+.section[data-section="3"]{
+    background-color: rgb(145, 201, 211);
+}
+#question-container{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#score{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+#question{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#options div{
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(142, 140, 126);
+    border: 1px green;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+}
+#options div:hover{
+    background-color:rgb(235, 214, 25);
+}
+#next-button{
+    margin-top: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    background-color: rgb(181, 181, 194);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#next-button:hover{
+    background-color: rgb(36, 223, 95);
+    
+}
+.selected{
+    background-color: white !important;
+}
+#feedback{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 0px solid white;
+    border-radius: 5px;
+    cursor:  default !important;
+}
+#feedback:hover{
+    background-color: transparent !important;
+}
+input [type="text"],
+input [type="number"]{
+    width: 80%;
+    padding: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px blue;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Inter" sans-serif;
+}
+button.submit-answer{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+button.submit-answer:hover{
+    background-color: green;
+}
